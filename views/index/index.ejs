@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogaac Kamera App</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5 text-center">
+            <div class="col-12 col-md-6 justify-content-center">
+                <h1>Mogaac: <span id="homeScore"><%= homeScore  %></span></h1>
+            </div>
+            <div class="col-12 col-md-6 justify-content-center">
+                <h1>Ellenfél: <span id="awayScore"><%= awayScore  %></span></h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 mt-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="d-md-none d-lg-none text-center">Mogaac pont</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('home', 1)" class="form-control">+1</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('home', 2)" class="form-control">+2</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('home', 3)" class="form-control">+3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="d-md-none d-lg-none text-center">Ellenfél pont</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('away', 1)" class="form-control">+1</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('away', 2)" class="form-control">+2</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button onclick="pointAdd('away', 3)" class="form-control">+3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-between">
+            <div class="col-12 col-md-6">
+                <button class="form-control" onclick="reset()">Reset</button>
+            </div>
+            <div class="col-12 col-md-6">
+                <button class="form-control" onclick="document.location.href = '/scoreSet'">Beállítás pontos eredményre</button>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
