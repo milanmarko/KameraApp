@@ -17,7 +17,15 @@ app.get('/', (req, res) => {
     const awayScore = scoreElements[2];
     res.render('index/index', { homeScore: homeScore, awayScore: awayScore });
 })
-// app.get('/setScore')
+app.get('/setScore', (req, res) => {
+    const scoreElements = fs.readFileSync('public/scores.txt', 'utf8', (err, data) => {
+        if (err) throw err;
+    }).split(' ');
+    const homeScore = scoreElements[0];
+    const awayScore = scoreElements[2];
+    res.render('setScore/setAccourateScore', {homeScore: homeScore, awayScore: awayScore});
+})
+
 // TODO pontos eredmény
 
 app.listen(1234);
