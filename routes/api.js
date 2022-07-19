@@ -26,7 +26,7 @@ router.post('/reset/', (req, res) => {
 })
 router.post('/setAccourateScore/', (req, res) => {
     fs.writeFileSync("public/scores.txt", `${req.body.home} - ${req.body.away}`, (err) => {});
-    res.send({"home": req.body.home, "away": req.body.away});
+    res.send({"home": parseInt(req.body.home), "away": parseInt(req.body.away)});
 })
 
 module.exports = router;

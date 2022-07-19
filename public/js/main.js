@@ -11,23 +11,25 @@ function pointAdd(team, point){
           "Content-Type": "application/x-www-form-urlencoded"
         },
         "data": {
-          "point": point,
+          "point": parseInt(point),
           "team": team
         }
     };
       
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done((response) => {
         scoreboardSet(response.home, response.away);
     });
 }
 function reset(){
-    var settings = {
-        "url": "api/reset/",
-        "method": "POST",
-        "timeout": 0,
-    };
-      
-    $.ajax(settings).done(function (response) {
-        scoreboardSet(response.home, response.away);
-    });
+    if (confirm('Biztos törölni szeretné az eddigi pontokat?')){
+        var settings = {
+            "url": "api/reset/",
+            "method": "POST",
+            "timeout": 0,
+        };
+          
+        $.ajax(settings).done((response) => {
+            scoreboardSet(response.home, response.away);
+        });
+    }
 }
