@@ -9,21 +9,20 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api/", api);
 
-app.get('/', (req, res) => {
+function getScore(){
     const scoreElements = fs.readFileSync('public/scores.txt', 'utf8', (err, data) => {
         if (err) throw err;
     }).split(' ');
     const homeScore = scoreElements[0];
     const awayScore = scoreElements[2];
-    res.render('index/index', { homeScore: homeScore, awayScore: awayScore });
+    return {homeScore: homeScore, awayScore: awayScore};
+}
+
+app.get('/', (req, res) => {
+    res.render('index/index', getScore());
 })
 app.get('/setScore', (req, res) => {
-    const scoreElements = fs.readFileSync('public/scores.txt', 'utf8', (err, data) => {
-        if (err) throw err;
-    }).split(' ');
-    const homeScore = scoreElements[0];
-    const awayScore = scoreElements[2];
-    res.render('setScore/setAccourateScore', {homeScore: homeScore, awayScore: awayScore});
+    res.render('setScore/setAccourateScore', getScore());
 })
 
 // TODO pontos eredmény
