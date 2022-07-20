@@ -33,3 +33,18 @@ function reset(){
         });
     }
 }
+function undo(){
+    var settings = {
+        "url": "api/undo/",
+        "method": "POST",
+        "timeout": 0,
+    };
+      
+    $.ajax(settings)
+    .done(function (response) {
+        scoreboardSet(response.home, response.away);
+    })
+    .fail(function (response) {
+        alert("Nincs több visszavonható pont!");
+    });
+}

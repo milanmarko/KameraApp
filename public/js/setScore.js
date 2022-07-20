@@ -12,7 +12,11 @@ function setAccourateScore() {
         }
     };
       
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings)
+    .done(function (response) {
         document.location.href = "/";
+    })
+    .fail(function (response) {
+        alert("Valamelyik mező üres!");
     });
 }

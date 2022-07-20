@@ -1,0 +1,29 @@
+.button{
+    background-color: var(--myBlue);
+    margin: 10px;
+    /* width: 10vw;
+    height: 75%; */
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: var(--myBlack);
+    transition: 0.3s;
+}
+.button:hover{
+    background-color: var(--myDarkBlue);
+    transition: 0.3s;
+}
+@media only screen and (max-width: 768px){
+    .container-fluid{
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .container-fluid{
+        width: 80px;
+    }
+}
+.container-fluid{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}

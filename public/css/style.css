@@ -1,0 +1,17 @@
+:root{
+    --myBlack: #1E2029;
+    --myBlue: #8bbae9;
+    --myDarkBlue: #3395f7;
+}
+body{
+    background-image: linear-gradient(#268ff7, #1E2029);
+    animation: forwards loading .5s ease-in-out;
+}
+@keyframes loading {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

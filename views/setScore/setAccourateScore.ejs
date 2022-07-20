@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pontos eredmény beállítása</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scoreSet.css">
 </head>
 <body>
     <div class="container">
         <div class="row text-center mt-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 mt-4 col-md-6">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <h1>Mogaac pontszám</h1>
+                            <h1>Hazai pontszám</h1>
                         </div>
                     </div>
-                    <div class="row mt-3 justify-content-center">
+                    <div class="row mt-3 background justify-content-center">
                         <div class="col-6">
-                            <input min="0" type="number" id="homeScoreSet" class="form-control" placeholder="Jelenlegi pont: <%= homeScore  %> ">
+                            <input min="0" type="number" id="homeScoreSet" class="form-control" placeholder="Jelenleg: <%= homeScore  %> ">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 mt-4 col-md-6">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <h1>Ellenfél pontszám</h1>
+                            <h1>Vendég pontszám</h1>
                         </div>
                     </div>
-                    <div class="row mt-3 justify-content-center">
+                    <div class="row mt-3 background justify-content-center">
                         <div class="col-6">
-                            <input min="0" type="number" id="awayScoreSet" class="form-control" placeholder="Jelenlegi pont: <%= awayScore  %> ">
+                            <input min="0" type="number" id="awayScoreSet" class="form-control" placeholder="Jelenleg: <%= awayScore  %> ">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row text-center mt-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 mt-3 col-md-6">
                 <button class="btn btn-danger" onclick="document.location.href = '/';">Vissza</button>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 mt-3 col-md-6">
                 <button class="btn btn-primary" onclick="setAccourateScore()" id="scoreSetButton">Pontok beállítása</button>
             </div>
         </div>
